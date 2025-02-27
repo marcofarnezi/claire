@@ -35,7 +35,13 @@
      ********************************************/
     header {
       width: 100%; height: 80px;
-      background: #111; position: fixed; top: 0; left: 0;
+      background: #1c1c1c;
+      color: #e0e0e0;
+      padding: 20px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      border-bottom: 3px solid #3a3a3a;
+      position: fixed; top: 0; left: 0;
       z-index: 1000; display: flex; align-items: center;
       justify-content: space-between; padding: 0 2rem;
     }
@@ -139,22 +145,25 @@
      * HERO SECTION WITH PARALLAX
      ********************************************/
     .hero {
+      background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+      padding: 80px 20px;
+      color: #e0e0e0;
+      border-radius: 15px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
       position: relative;
       min-height: 100vh;
       margin-top: 70px; /* Compensa o header fixo */
-      color: #fff;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
       overflow: hidden;
-      padding: 0 1rem;
 
     }
     /* Fundo vibrante com gradiente e efeito parallax */
     .hero.parallax {
-      background: linear-gradient(45deg, #FFD700, #FF3366);
       background-attachment: fixed;
       background-size: cover;
       background-position: center;
@@ -251,11 +260,12 @@
      ********************************************/
     .about-section {
       position: relative;
-      background: #00CCFF;
-      color: #fff;
-      padding: 80px 20px;
+      background: #252525;
+      color: #d1d1d1;
       text-align: center;
       clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+      padding: 50px;
+      border-radius: 10px;
     }
     .about-section h2 {
       font-size: 2.5rem;
@@ -296,8 +306,8 @@
      ********************************************/
     .events-section {
       position: relative;
-      background: #FFD700;
-      color: #333;
+      background: linear-gradient(135deg, #2e2e2e, #1c1c1c);
+      color: #ccc;
       padding: 80px 20px;
       text-align: center;
       clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
@@ -342,8 +352,8 @@
      ********************************************/
     .gallery-section {
       position: relative;
-      background: #111;
-      color: #fff;
+      background: #303030;
+      color: #c0c0c0;
       padding: 80px 20px;
       text-align: center;
       clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
@@ -380,7 +390,7 @@
      ********************************************/
     .instagram-feed {
       position: relative;
-      background: linear-gradient(45deg, #FF99CC, #FFCC00);
+      background: linear-gradient(135deg, #B03060, #FFD700);
       color: #fff;
       padding: 80px 20px;
       text-align: center;
@@ -400,7 +410,7 @@
      ********************************************/
     .music-player {
       position: relative;
-      background: linear-gradient(45deg, #66FF66, #33CCFF);
+      background: linear-gradient(135deg, #FFD700, #B03060);
       color: #fff;
       padding: 80px 20px;
       text-align: center;
@@ -424,8 +434,8 @@
      ********************************************/
     .contact-section {
       position: relative;
-      background: #FF3366;
-      color: #fff;
+      background: #1e1e1e;
+      color: #b0b0b0;
       padding: 80px 20px;
       text-align: center;
       clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
@@ -451,8 +461,8 @@
       outline: none;
     }
     .contact-form button {
-      background-color: #fff;
-      color: #FF3366;
+      background: #3a3a3a;
+      color: #e0e0e0;
       padding: 0.8rem;
       font-size: 1.2rem;
       font-weight: 600;
@@ -462,16 +472,15 @@
       transition: background-color 0.3s, color 0.3s;
     }
     .contact-form button:hover {
-      background-color: #FF3366;
-      color: #fff;
+      background: #555;
     }
     
     /********************************************
      * FOOTER
      ********************************************/
     footer {
-      background: #000;
-      color: #fff;
+      background: #1a1a1a;
+      color: #c0c0c0;
       text-align: center;
       padding: 1rem;
     }
@@ -574,6 +583,20 @@
   }
 }
 
+.text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 80px;
+            font-weight: 800;
+            color: white;
+            display: inline-block;
+            text-shadow: 
+                -4px 4px 0px black,
+                -8px 8px 0px black,
+                -12px 12px 0px black,
+                -16px 16px 0px black,
+                -20px 20px 0px black;
+        }
+
   </style>
 </head>
 <body>
@@ -614,7 +637,7 @@
   
   <!-- HERO SECTION -->
   <section class="hero parallax" id="home">
-    <div class="band-name-overlay">CLAIRE BAND</div>
+    <div class="band-name-overlay text">CLAIRE</div>
     <!-- Asas saindo por trás -->
     <div class="wing wing-left"></div>
     <div class="wing wing-right"></div>
