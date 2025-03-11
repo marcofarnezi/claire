@@ -597,6 +597,96 @@
                 -20px 20px 0px black;
         }
 
+
+
+
+.neon-effect {
+  position: relative;           /* Necessário se for usar pseudo-elementos */
+  filter: grayscale(100%);      /* Deixa a imagem em preto e branco (opcional) */
+  border-radius: 10px;          /* Arredonda cantos se quiser */
+  /* Aqui vem o "brilho" neon usando box-shadow */
+  box-shadow: 
+    0 0 5px   #f0f, 
+    0 0 10px  #f0f, 
+    0 0 20px  #f0f, 
+    0 0 40px  #f0f;
+  
+  animation: neonPulse 2s ease-in-out infinite alternate;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Animação de "pulso" do neon */
+#face1 {
+  box-shadow: 
+    0 0 5px   #FF0000, 
+    0 0 10px  #FF0000, 
+    0 0 20px  #FF0000;
+  animation: neonPulse1 3s ease-in-out infinite alternate;
+}
+@keyframes neonPulse1 {
+  0% {
+    box-shadow: 0 0 150px #FF0000;
+  }
+  100% {
+    box-shadow: 0 0 250px #FF0000;
+  }
+}
+
+/* Membro 2 - Neon amarelo */
+#face2 {
+
+  box-shadow: 
+    0 0 5px   #FFFF00, 
+    0 0 10px  #FFFF00, 
+    0 0 20px  #FFFF00;
+  animation: neonPulse2 2s ease-in-out infinite alternate;
+}
+@keyframes neonPulse2 {
+  0% {
+    box-shadow: 0 0 150px #FFFF00;
+  }
+  100% {
+    box-shadow: 0 0 250px #FFFF00;
+  }
+}
+
+/* Membro 3 - Neon vermelho */
+#face3 {
+  
+  box-shadow: 
+    0 0 5px   #FF5500, 
+    0 0 10px  #FF5500, 
+    0 0 20px  #FF5500;
+  animation: neonPulse3 4s ease-in-out infinite alternate;
+}
+@keyframes neonPulse3 {
+  0% {
+    box-shadow: 0 0 150px #FF5500;
+  }
+  100% {
+    box-shadow: 0 0 250px #FF5500;
+  }
+}
+
+/* Membro 4 - Neon verde */
+#face4 {
+  
+  box-shadow: 
+    0 0 5px   #FFAA00, 
+    0 0 10px  #FFAA00, 
+    0 0 20px  #FFAA00;
+  animation: neonPulse4 5s ease-in-out infinite alternate;
+}
+@keyframes neonPulse4 {
+  0% {
+    box-shadow: 0 0 150px #FFAA00;
+  }
+  100% {
+    box-shadow: 0 0 250px #FFAA00;
+  }
+}
+
+
   </style>
 </head>
 <body>
@@ -643,17 +733,17 @@
     <div class="wing wing-right"></div>
 
     <div class="band-members parallax-element" data-speed="0.1">
-      <div class="member">
-        <img src="./images/face1.jpg" alt="Membro 1" id="face1">
+       <div class="member">
+        <img src="./images/face1-bw.jpg" alt="Membro 1" class="neon-effect" id="face1">
       </div>
       <div class="member">
-        <img src="./images/face2.jpg" alt="Membro 2" id="face2">
+        <img src="./images/face2-bw.jpg" alt="Membro 2" class="neon-effect" id="face2">
       </div>
       <div class="member">
-        <img src="./images/face3.jpg" alt="Membro 3" id="face3">
+        <img src="./images/face3-bw.jpg" alt="Membro 3" class="neon-effect" id="face3">
       </div>
       <div class="member">
-        <img src="./images/face4.jpg" alt="Membro 4" id="face4">
+        <img src="./images/face4-bw.jpg" alt="Membro 4" class="neon-effect" id="face4">
       </div>
     </div>
   </section>
@@ -800,12 +890,12 @@
 
     /*member-image session*/
 
-    function glitchEffect() {
+    /*function glitchEffect() {
       let faces = ['face1', 'face2', 'face3', 'face4'];
       let randomFace = faces[Math.floor(Math.random() * faces.length)];
       let imgElement = document.getElementById(randomFace);
       let originalSrc = imgElement.src;
-      let glitchSrc = originalSrc.replace('.jpg', '-1.jpg');
+      let glitchSrc = originalSrc.replace('-bw.jpg', '-1-bw.jpg');
 
       imgElement.src = glitchSrc;
       imgElement.classList.add('glitch');
@@ -815,7 +905,7 @@
         setTimeout(glitchEffect, 1000 + Math.random() * 1000); // Espera entre 5 e 10 segundos
       }, 800);
     }
-    setTimeout(glitchEffect, 1000 + Math.random() * 1000);
+    setTimeout(glitchEffect, 1000 + Math.random() * 1000);*/
   </script>
 </body>
 </html>
