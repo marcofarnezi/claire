@@ -145,23 +145,16 @@
      * HERO SECTION WITH PARALLAX
      ********************************************/
     .hero {
-      background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
-      padding: 80px 20px;
-      color: #e0e0e0;
-      border-radius: 15px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      position: relative;
-      min-height: 100vh;
-      margin-top: 70px; /* Compensa o header fixo */
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      overflow: hidden;
-
-    }
+  position: relative; /* Necessário para sobrepor elementos no vídeo */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  background: none; /* Remove qualquer imagem de fundo */
+}
     /* Fundo vibrante com gradiente e efeito parallax */
     .hero.parallax {
       background-attachment: fixed;
@@ -585,7 +578,7 @@
 
 .text {
             font-family: 'Poppins', sans-serif;
-            font-size: 80px;
+            font-size: 160x;
             font-weight: 800;
             color: white;
             display: inline-block;
@@ -686,6 +679,16 @@
   }
 }
 
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Mantém o vídeo no fundo */
+  opacity: 0.9; /* Ajuste a opacidade se necessário */
+}
 
   </style>
 </head>
@@ -727,25 +730,12 @@
   
   <!-- HERO SECTION -->
   <section class="hero parallax" id="home">
+    <video autoplay loop muted playsinline class="background-video">
+      <source src="./videos/Claire.mp4" type="video/mp4">
+      Seu navegador não suporta vídeos.
+    </video>
     <div class="band-name-overlay text">CLAIRE</div>
-    <!-- Asas saindo por trás -->
-    <div class="wing wing-left"></div>
-    <div class="wing wing-right"></div>
-
-    <div class="band-members parallax-element" data-speed="0.1">
-       <div class="member">
-        <img src="./images/face1-bw.jpg" alt="Membro 1" class="neon-effect" id="face1">
-      </div>
-      <div class="member">
-        <img src="./images/face2-bw.jpg" alt="Membro 2" class="neon-effect" id="face2">
-      </div>
-      <div class="member">
-        <img src="./images/face3-bw.jpg" alt="Membro 3" class="neon-effect" id="face3">
-      </div>
-      <div class="member">
-        <img src="./images/face4-bw.jpg" alt="Membro 4" class="neon-effect" id="face4">
-      </div>
-    </div>
+  
   </section>
 
    <!-- MUSIC PLAYER SECTION -->
